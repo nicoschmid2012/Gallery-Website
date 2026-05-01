@@ -6,10 +6,12 @@ import os
 IP_Addr = "0.0.0.0"
 PORT = 5500
 
-def throw_error(error):
-    response = f"HTTP/1.1 404 NOT FOUND\r\ntext/html\r\n\r\n<h1>{error} not found</h1>"
-    print("Error: " + error)
-    return response.encode()
+def throw_error(error) -> bytes:
+    global response
+    if not response:
+        response = f"HTTP/1.1 404 NOT FOUND\r\ntext/html\r\n\r\n<h1>{error} not found</h1>"
+        print("Error: " + error)
+        return response.encode()
 
 
 def make_socket(IP, PORT):
@@ -97,10 +99,22 @@ def get_response_by_path(path, query):
     elif path == "/picture":
         status = "200 OK"
         content_type = "image/png"
+        picture_id = 0
 
-        picture = query.removeprefix("p=")
-        if picture == "0":
-            picture = "placeholder"
+        try:
+            picture_id = int(query.removeprefix("p="))
+        except:
+            response = throw_error("query")
+
+        try:
+            with open("picture_search_file.json","r") as search_file:
+                search = json.load(search_file)
+                for ids, info in search.items():
+                    if info["id"] == picture_id:
+                        picture = info["file"]
+
+        except:
+            response = throw_error("picture id")
 
         try:
             with open("pictures/" + picture + ".png","rb") as picture:
@@ -118,7 +132,7 @@ def get_response_by_path(path, query):
         status = "200 OK"
         content_type = "application/json"
         if query:
-            content = get_img_by_query(querry)
+            content = get_img_by_query(query)
         else:
             content = throw_error("query")
 
