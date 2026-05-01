@@ -1,0 +1,38 @@
+{
+  "id0" : {
+    "name": "DefaultPicture",
+    "description": "This is the default picture",
+    "file": "/placeholder",
+    "id": 0
+  },
+  "id1" : {
+    "name": "MobsPng",
+    "description": "This shows about 18 Mobs on a PNG background",
+    "file": "/picture1",
+    "id": 1
+  },
+  "id2" : {
+    "name": "WanderingTrader",
+    "description": "This picture shows a wandering trader exploring with his snifer",
+    "file": "/picture2",
+    "id": 2
+  },
+  "id3" : {
+    "name": "Slime_Bee",
+    "description": "This is a cut clipart of a slime and a bee",
+    "file": "/fanart3",
+    "id": 3
+  },
+  "id4" : {
+    "name": "WanderingTraderIcon",
+    "description": "A nice wandering trader logo",
+    "file": "/logo",
+    "id": 4
+  },
+    "id5" : {
+    "name": "ManyTotems",
+    "description": "A shulker full of Totems",
+    "file": "/picture3",
+    "id": 5
+  }
+}

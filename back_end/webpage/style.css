@@ -1,0 +1,57 @@
+body {
+  background-color: lightblue;
+  margin: 0;
+}
+.heading {
+  position: absolute;
+  top: 16px;
+  left: 48px;
+  right: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.head-line {
+  width: 50%;
+  font-size: 64px;
+  color: black;
+}
+.search-div {
+  display: flex;
+  align-items: center;
+}
+.search-label {
+  width: 256px;
+  height: 48px;
+  font-size: 32px;
+  right: 16px;
+}
+.search-button {
+  width: 128px;
+  height: 48px;
+  font-size: 32px;
+}
+.pictures {
+  position: absolute;
+  left: 64px;
+  bottom: 128px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pic-div {
+  position: relative;
+  top: 32px;
+}
+
+.img {
+  max-width: 50%;
+  height: auto;
+}
+
+.description {
+  font-size: 32px;
+  color: black;
+}

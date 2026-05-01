@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style">
+    <script src="script"></script>
+    <title>Gallery</title>
+</head>
+
+<body>
+    <div class="heading">
+        <h1 class="head-line">
+            A Gallery of Pictures
+        </h1>
+        <div class="search-div">
+            <form onsubmit="SearchPicture(event)">
+                <input type="text" class="search-label" placeholder="  search" id="search-input" required>
+                <button class="search-button"> search</button>
+            </form>
+        </div>
+    </div>
+    <div class="pictures">
+        <div class="pic-div">
+            <img src="/picture?p=0" class="img">
+            <h2 class="description">This is the discription</h2>
+        </div>
+        <div class="pic-div">
+            <img src="/picture?p=0" class="img">
+            <h2 class="description">This is the discription</h2>
+        </div>
+        <div class="pic-div">
+            <img src="/picture?p=0" class="img" id="pic3">
+            <h2 class="description" id="desc3">This is the discription</h2>
+        </div>
+    </div>
+</body>
+
+</html>
