@@ -1,38 +1,50 @@
 {
-  "id0" : {
+  "id0": {
     "name": "DefaultPicture",
     "description": "This is the default picture",
-    "file": "/placeholder",
+    "file": "placeholder",
     "id": 0
   },
-  "id1" : {
+  "id1": {
     "name": "MobsPng",
     "description": "This shows about 18 Mobs on a PNG background",
-    "file": "/picture1",
+    "file": "picture1",
     "id": 1
   },
-  "id2" : {
+  "id2": {
     "name": "WanderingTrader",
     "description": "This picture shows a wandering trader exploring with his snifer",
-    "file": "/picture2",
+    "file": "picture2",
     "id": 2
   },
-  "id3" : {
+  "id3": {
     "name": "Slime_Bee",
     "description": "This is a cut clipart of a slime and a bee",
-    "file": "/fanart3",
+    "file": "fanart3",
     "id": 3
   },
-  "id4" : {
+  "id4": {
     "name": "WanderingTraderIcon",
     "description": "A nice wandering trader logo",
-    "file": "/logo",
+    "file": "logo",
     "id": 4
   },
-    "id5" : {
+  "id5": {
     "name": "ManyTotems",
     "description": "A shulker full of Totems",
-    "file": "/picture3",
+    "file": "picture3",
     "id": 5
+  },
+  "id6": {
+    "name": "Erik-Bild",
+    "description": "Picture send by Erik ",
+    "file": "erik_bild",
+    "id": 6
+  },
+  "id7": {
+    "name": "RandVill",
+    "description": "Here is a random picture with a villiger",
+    "file": "villiger",
+    "id": 7
   }
 }

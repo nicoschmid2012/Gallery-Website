@@ -1,6 +1,5 @@
-import socket as sk
-import threading as th
 import json
+import socket as sk
 
 IP_Addr = "0.0.0.0"
 PORT = 5500
@@ -29,10 +28,11 @@ def get_img_by_query(query):
         request = query.removeprefix("s=")
 
     try:
-        with open("picture_search_file.json","r") as search_file:
+        with open("./picture_search_file.json", "r") as search_file:
             json_search = json.load(search_file)
     except:
         throw_error("files")
+
     for picture_id, info in json_search.items():
         if info["name"] == request or info["id"] == request:
             picture = info["id"]
@@ -102,7 +102,7 @@ def get_response_by_path(path, query) -> bytes:
             throw_error("query")
 
         try:
-            with open("picture_search_file.json","r") as search_file:
+            with open("./picture_search_file.json", "r") as search_file:
                 search = json.load(search_file)
                 for ids, info in search.items():
                     if info["id"] == picture_id:
@@ -110,9 +110,8 @@ def get_response_by_path(path, query) -> bytes:
 
         except:
             throw_error("picture id")
-        print(f"pictures" + picture + ".png")
         try:
-            with open("pictures" + picture + ".png","rb") as picture:
+            with open("pictures/" + picture + ".png","rb") as picture:
                 content = picture.read()
         except:
             throw_error("picture")
